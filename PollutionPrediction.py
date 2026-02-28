@@ -17,7 +17,7 @@ st.set_page_config(page_title="Air Quality Predictor", page_icon="🌍", layout=
 # -----------------------------------------------------------------------------
 @st.cache_data
 def load_data():
-    df = pd.read_csv('D:\OldPC\ProgramingCgu\AiTraining\city_day.csv')
+    df = pd.read_csv('city_day.csv')
     df['Date'] = pd.to_datetime(df['Date'])
     return df
 
@@ -174,4 +174,5 @@ def main():
             st.warning("No historical data available for the selected city.")
 
 if __name__ == "__main__":
+
     main()
